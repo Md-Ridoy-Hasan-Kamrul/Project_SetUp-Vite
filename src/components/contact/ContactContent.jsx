@@ -27,7 +27,7 @@ const ContactForm = memo(() => {
     async (e) => {
       e.preventDefault();
 
-      const { data, error } = await submitForm(formData);
+      const { error } = await submitForm(formData);
 
       if (error) {
         toast.error(

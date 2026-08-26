@@ -17,7 +17,7 @@ const Messages = memo(() => {
           Conversations with users and clients.
         </p>
       </div>
-      <ChatPanel role="admin" className="flex-1 min-h-0" />
+      <ChatPanel viewerRole="admin" className="flex-1 min-h-0" />
     </div>
   );
 });

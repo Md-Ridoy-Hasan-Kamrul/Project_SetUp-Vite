@@ -159,7 +159,7 @@ const Sidebar = ({
         <p className="px-3 mb-3 text-xs font-semibold text-gray-400 uppercase tracking-[0.08em]">
           Main Menu
         </p>
-        <ul className="space-y-1.5" role="list">
+        <ul className="space-y-1.5">
           {NAV_ITEMS.map(({ name, path, icon: Icon, autoCollapse }) => (
             <li key={path}>
               <NavLink

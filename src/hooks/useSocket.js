@@ -16,11 +16,13 @@ export function useSocket({
   const onUserOnlineRef = useRef(onUserOnline);
   const onUserOfflineRef = useRef(onUserOffline);
 
-  onMessageRef.current = onMessage;
-  onTypingStartRef.current = onTypingStart;
-  onTypingStopRef.current = onTypingStop;
-  onUserOnlineRef.current = onUserOnline;
-  onUserOfflineRef.current = onUserOffline;
+  useEffect(() => {
+    onMessageRef.current = onMessage;
+    onTypingStartRef.current = onTypingStart;
+    onTypingStopRef.current = onTypingStop;
+    onUserOnlineRef.current = onUserOnline;
+    onUserOfflineRef.current = onUserOffline;
+  });
 
   const [isConnected, setIsConnected] = useState(() => socket.connected);
   const [socketError, setSocketError] = useState(null);

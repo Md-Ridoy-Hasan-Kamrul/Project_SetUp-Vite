@@ -113,8 +113,8 @@ export default [
     },
   },
 
-  // Ignore generated output
+  // Ignore generated output and Jest stubs
   {
-    ignores: ['dist/**', 'node_modules/**'],
+    ignores: ['dist/**', 'node_modules/**', 'src/__mocks__/**', 'e2e/**', 'playwright.config.*'],
   },
 ];

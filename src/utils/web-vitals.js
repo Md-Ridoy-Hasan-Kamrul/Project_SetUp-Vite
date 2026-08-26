@@ -60,9 +60,8 @@ const logToConsole = (metric) => {
     status = '🟡 Needs Improvement';
   }
 
-  console.log(
-    `%c${metric.name}: ${metric.value.toFixed(2)} ${status}`,
-    `color: ${status.includes('🟢') ? 'green' : status.includes('🟡') ? 'orange' : 'red'}; font-weight: bold;`,
+  console.warn(
+    `${metric.name}: ${metric.value.toFixed(2)} ${status}`,
   );
 };
 
